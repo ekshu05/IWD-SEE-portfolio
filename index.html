@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        img {
+            padding-bottom: 20px;
+        }
+
+        #education #skills {
+            background-color: #000;
+            color: white;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(177, 204, 124);
+            color: #000;
+        }
+
+        .projects .intro {
+            background-color: rgb(84, 111, 40);
+            color: #f8f8f8;
+
+            padding: 20px;
+        
+        }
+
+
+        h1 {
+            font-size: 70px;
+            background-color: #333;
+            color: aliceblue;
+            margin-top: 0;
+            text-align: center;
+            padding: 10px;
+            height: 90px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #333;
+            /* Change the background color to a dark color */
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            top: 0;
+        }
+
+        footer {
+            background-color: rgb(20, 20, 47);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            /* Add spacing between icons */
+            color: white;
+            text-decoration: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            /* Change text color to white */
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: greenyellow;
+            /* Change hover background color */
+            color: #333;
+            /* Change hover text color */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        li:hover .dropdown-content {
+            display: block;
+        }
+
+
+        .main-content {
+            margin-left: 25%;
+            padding: 1px 16px;
+            height: 1000px;
+
+            h2,
+            h3,
+            h4 {
+                color: #333;
+            }
+
+            p {
+                color: #555;
+            }
+
+            .project {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: #f8f8f8;
+                color: #333;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            body {
+                background-color: #aafaa9;
+                color: #555;
+            }
+        }
+
+
+        /* Additional styling for the "About Me" section */
+        h2+li {
+            margin-top: 40px;
+        }
+
+        li {
+            margin-bottom: 40px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: rgb(16, 16, 49);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            /* Add padding as needed */
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        <center>Portfolio</center>
+    </h1>
+
+    <ul id="ul">
+        <li><a class="active" href="#intro">Introduction</a></li>
+
+        <!-- Add a dropdown for the "About" menu item -->
+        <li>
+            <a href="#" class="dropbtn">About</a>
+            <div class="dropdown-content">
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#hobbies">Hobbies</a>
+
+            </div>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="main-content">
+        <h2 id="intro"><strong>Introduction</strong></h2>
+        <p>
+            Hi there! I'm Ekshu D P, a passionate and ambitious student pursuing Btech(Hons.) CSE at RV University.
+            <br>
+            I have a keen interest in web design and programming, and I'm always eager to learn and explore new things.
+        </p>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <img src="image.jpg" alt="Image Description"
+            style="border-radius: 1000px; float: right; margin: 10px; width: 300px; height: auto;">
+        <br>
+        <h2 id="about">About Me</h2>
+        <p>
+            <li>Birthdate: 14th Oct 2005
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Website: </li>
+            <li>Phone: +91 9019694947
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                City: Bengaluru</li>
+            <li>Degree: BTech (Hons.) CSE
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                email: ekshud.btech23@rvu.edu.in</li>
+            <li>Languages Known: English, Kannada, Hindi, German
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+        </p>
+
+        <div style="clear: both;"></div>
+        <br><br>
+        <h3 id="education"><strong>Education</strong></h3>
+        <h4><u><i>Schooling(2010-2021)</i></u></h4>
+        <p>Completed schooling from National Public School, Yelahanka with a 90% result overall in class 10 boards</p>
+        <br>
+        <h4><u><i>Pre-University College(2021-2023)</i></u></h4>
+        <p>Completed PUC at NPS.Yelahanka with a 90% result overall in class 12th boards</p>
+        <br>
+        <h4><u><i>College(2023-2027)</i></u></h4>
+        <p>I am currently pursuing BTech CSE at RVU expected 2027</p>
+        <br><br>
+        <h3 id="skills"><strong>Skills</strong></h3>
+        <p>Web Development: <br>
+
+            Proficient in creating static web pages using HTML and CSS.
+            Basic understanding of dynamic web development with JavaScript.
+            <br><br>
+            Back-End Development: <br>
+
+            Basic server-side scripting skills in Python and C.
+            Basic database management using SQL.
+            <br><br>
+            Programming Languages:
+            <br>
+
+            Basic proficiency in Python and C.
+            <br><br>Data Analysis Using Python
+            <br><br>Powerbi
+            <br>
+            <br>
+            <br>
+        <h3 id="hobbies">Hobbies</h3>
+        <ol>
+            <li>Coding Challenges: Enthusiastic about solving coding challenges on platforms like LeetCode and
+                HackerRank to enhance problem-solving skills</li>
+            <li>Web Development Side Projects: Enjoy creating personal web projects to explore new technologies and
+                showcase creativity in design and functionality.</li>
+            <li>Gaming</li>
+            <li>Learning new Languages</li>
+        </ol>
+        </p>
+        <br><br>
+        <hr><br><br>
+        <div class="projects">
+            <h2 id="projects">Projects</h2>
+            <div class="project">
+                <h4>Project 1</h4>
+                <iframe src="Main_Page.html" width="70%" height="400px" frameborder="0"></iframe>
+                <p>Made a gym based website as a web design project in 2020 using html CSS and JavaScript</p>
+            </div>
+
+            <div class="project">
+
+                </style>
+                <h4>Project 2</h4>
+                <embed src="tech analysis.pdf" type="application/pdf" width="40%" height="200px" />
+                <div class="report">Report File</div>
+
+
+                <p>Conducted a data analysis on Harshitha Technologies for Data Analysis using Python project</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <h2 id="contact">Contact Me</h2>
+        <li>Phone Number: 9019694947</li>
+        <li onclick="composeEmail()">email ID(personal): ekshupradeep@gmail.com</li>
+
+
+        <script></script>
+</body>
+<footer>
+    <button onclick="changeColors()">Change Mode</button>
+    <footer style="background-color: rgb(20, 20, 47);">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ekshu_18/" target="_blank">
+                <i class="fab fa-instagram" style="font-size:24px"></i>
+
+            </a>
+            <a href="https://twitter.com/ekshu_12" target="_blank">
+                <i class="fab fa-twitter" style="font-size:24px"></i>
+            </a>
+            <a href="https://in.pinterest.com/ekshupradeep/" target="_blank">
+                <i class="fab fa-pinterest" style="font-size:24px"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ekshu-pradeep-78500528b/" target="_blank">
+                <i class="fab fa-linkedin" style="font-size:24px"></i>
+            </a>
+            <a href="https://github.com/ekshu007" target="_blank">
+                <i class="fab fa-github" style="font-size:24px"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        <!-- Add this script in the head section or before the closing body tag -->
+
+        function composeEmail() {
+            // Replace 'your-email@gmail.com' with your actual email address
+            var email = 'ekshupradeep@gmail.com';
+
+            // Compose the mailto URL
+            var mailtoURL = 'mailto:' + email;
+
+            // Open the mailto URL
+            window.location.href = mailtoURL;
+        }
+
+
+        function changeColors() {
+            var body = document.body;
+
+            // Change background color to purple
+            body.style.backgroundColor = '#000';
+
+            // Change font color to black
+            body.style.color = '#FFFFFF';
+        }
+    </script>
+
+
+</html>

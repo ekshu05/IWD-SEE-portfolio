@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Registration</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico.png">
+    <div class="header">
+       <center> <img src="favicon_io\favicon.ico.png" alt="logo" style="background-color: rgb(23, 23, 54);" /></center>
+    <h1><center>Registration Form</center></h1>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+        h1
+        {
+            background-color: rgb(23, 23, 54);
+            color: aquamarine;
+        }
+        body {
+            background-color:rgb(23, 27, 55);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            color:rgb(28, 34, 39) ;
+            background: #b3cee8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgb(20, 20, 47);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .social-icons a {
+            color: white;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+        }
+        #course{
+            width: 400px;
+            height: 30px;
+
+        }
+        #location{
+            width: 400px;
+            height: 30px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon_io/favicon.ico.png" type="image/png"> <!-- Favicon -->
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico.png">
+</head>
+
+<body>
+    <form id="registrationForm" onsubmit="validateForm(event)">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <label for="course">Course Type:</label>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Select a course</option>
+            <option value="course1">Quick Result Programme</option>
+            <option value="course2">Personal Training</option>
+            <option value="course3">Group Training</option>
+            <!-- Add more options as needed -->
+        </select>
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+            <option value="" disabled selected>Select a course</option>
+            <option value="course1">Hebbal</option>
+            <option value="course2">Koramangala</option>
+            <option value="course3">Rajajinagar</option>
+        </select>
+        <br>
+        <br>
+
+        
+        <button type="submit">Register</button>
+        <button class="button" style="color: antiquewhite;"><a href="Main_Page.html">Back to Home</a></button>
+    </form>
+    <br>
+    <br>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/your_instagram_handle" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/your_twitter_handle" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.pinterest.com/your_pinterest_handle" target="_blank">
+                <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="https://www.reddit.com/user/your_reddit_username" target="_blank">
+                <i class="fab fa-reddit"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var course = document.getElementById('course').value;
+            var location = document.getElementById('location').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            alert("Registration successful!\nName: " + fullName + "\nEmail: " + email);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico.png">
+  <link rel="stylesheet" href="common.css">
+  <style>
+    /* Add some basic styles for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: rgb(39, 39, 69);
+      color: aliceblue;
+    }
+
+    table {
+      border: 1;
+      table-layout: fixed;
+    }
+
+    .cart {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    header {
+      background-color: #3c1a1a;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .go-to-cart {
+      padding-left: 1000px;
+    }
+
+    .img-cart {
+      height: 50px;
+      width: 50px;
+      padding-left: 1000px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 120px;
+      margin-right: 10px;
+    }
+
+    .button {
+      color: azure;
+      background-color: black;
+      width: 100px;
+    }
+
+    .header h1 {
+      display: inline-block;
+      margin: 0;
+    }
+
+    nav {
+      background-color: black;
+    }
+
+    .header button {
+      background-color: greenyellow;
+      color: black;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav li {
+      float: left;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: greenyellow;
+      color: black;
+    }
+
+
+    h3 {
+      color: beige;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    fieldset {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 300px;
+    }
+
+    legend {
+      background-color: aqua;
+      color: black;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .remove-button {
+      background-color: red;
+      color: white;
+      border: none;
+      width: 80px;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+    }
+
+    li {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .equipment-button {
+      background-color: greenyellow;
+      color: black;
+      border: none;
+      width: 100px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    td[colspan] {
+      max-height: fit-content;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    footer {
+      background-color: rgb(20, 20, 47);
+      padding: 20px;
+      /* Adjust the padding as needed */
+      margin-top: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icons i {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="xyz">
+    <center><strong>Shop🛒</strong></center>
+  </h1>
+  <br>
+  <br>
+  <div>
+    <nav>
+      <ul>
+        <li><a href="#Strngth">Strength Training equipments</a></li>
+        <li><a href="#balance">Balance</a></li>
+        <li><a href="#flexibility">Flexibility</a></li>
+        <li><a href="#cardio">Cardio</a></li>
+      </ul>
+    </nav>
+    <legend>
+      <div id="Strength">
+        <center>Strength Training Equipments</center>
+      </div>
+
+    </legend>
+    <table border="1">
+      <tr>
+
+        <td><img src="images\3kg_dumbell.webp" alt="">3kg dumbell - Rs400</td>
+        <td><button onclick="addToCart(1, '3kg weights pair', 400)">Add to Cart</button></td>
+        <td rowspan="3">Lifting weights, or strength training, offers a range of health and fitness benefits. <br> It
+          helps build and maintain lean muscle mass,
+          which is crucial for metabolism and weight management. <br> Strength training also enhances bone density,
+          reducing the risk of osteoporosis. <br>
+          Additionally, lifting weights contributes to improved posture, joint health, and overall functionality in
+          daily activities. <br>
+          It can be an effective tool for stress relief and mental well-being, promoting a balanced and holistic
+          approach to fitness.</td>
+      </tr>
+
+      <tr>
+        <td><img src="images\5kg_weigtts.webp" alt="5kg weights">5kg weights - Rs1500</td>
+        <td><button onclick="addToCart(2, '5kg weights pair', 1500)">Add to Cart</button></td>
+
+      </tr>
+      <tr>
+        <td><img src="images\10kg weights.webp" alt="10kg"> 10 kg weights - Rs2899</td>
+        <td><button onclick="addToCart(3, '10kg weights', 2899)">Add to Cart</button></td>
+        <div>
+
+    </table>
+    <hr>
+    <hr>
+    <legend>
+      <div id="balance">
+        <center>Balance Equipments</center>
+      </div>
+    </legend>
+    <table border="1">
+      <tr>
+
+        <td><img src="images\agility_ladders.jpeg" alt="">Agility Ladders - Rs 720</td>
+        <td><button onclick="addToCart(1, 'Agility Ladders', 720)">Add to Cart</button></td>
+        <td>Agility ladders are valuable tools for improving footwork, agility, and overall coordination in sports and
+          fitness training.<br>
+          They are effective for enhancing quickness and responsiveness, making them ideal for athletes and individuals
+          focused on agility.<br>
+          Using agility ladders can contribute to improved balance and stability, crucial for various sports and
+          physical activities.<br>
+          Incorporating agility ladder drills into your routine can add a fun and dynamic element to your workouts while
+          targeting specific movement patterns.</td>
+
+      </tr>
+      <tr>
+        <td><img src="images\stability_balls.jpg" alt="5kg weights">Stability Balls - Rs720</td>
+        <td><button onclick="addToCart(2, 'Stability Balls', 720)">Add to Cart</button></td>
+        <td>Stability balls, also known as exercise or Swiss balls, are versatile tools for enhancing core strength and
+          stability.<br>
+          They are effective for improving balance and coordination, making them beneficial for various fitness and
+          rehabilitation exercises.<br>
+          Using stability balls engages multiple muscle groups, promoting overall body strength and flexibility.<br>
+          Incorporating stability ball exercises into your routine can contribute to better posture, reduced back pain,
+          and an engaging workout experience.</td>
+      </tr>
+      <tr>
+        <td><img src="images\bosu ball.webp" alt="Bosu Ball"> bosu ball - Rs3500</td>
+        <td><button onclick="addToCart(3, 'Bosu Ball', Rs3500)">Add to Cart</button></td>
+        <td>A Bosu ball is a versatile fitness tool that combines the benefits of a stability ball and a balance
+          board.<br>
+          It is effective for improving balance, stability, and core strength through a variety of exercises.<br>
+          Using a Bosu ball adds an element of instability, engaging the muscles to work harder and enhancing overall
+          body control.<br>
+          Incorporating Bosu ball exercises into your workout routine can benefit functional fitness, agility, and
+          rehabilitation.</td>
+      </tr>
+      <tr>
+        <td><img src="images\balance wedges.webp" alt="balance wedges"> Balance Wedges - Rs840</td>
+        <td><button onclick="addToCart(3, 'balance wedges', 840)">Add to Cart</button></td>
+        <td>Balance wedges are ergonomic tools designed to improve balance, stability, and posture during various
+          exercises.<br>
+          They are effective for enhancing proprioception and body awareness, promoting better alignment and
+          control.<br>
+          Using balance wedges can engage the core muscles, contributing to improved abdominal strength and overall
+          stability.<br>
+          Incorporating balance wedge exercises into your routine can benefit rehabilitation, functional movement, and
+          dynamic workouts.</td>
+      </tr>
+
+    </table>
+    <hr>
+    <hr>
+
+    <legend>
+      <div id="flexibility">
+        <center>Flexibility Equipments</center>
+      </div>
+    </legend>
+    <table border="1">
+      <tr>
+
+        <td><img src="images\Resistance band.webp" alt="">Resistance Bands - Rs 250</td>
+        <td><button onclick="addToCart(1, 'resistance bads(3)', 250)">Add to Cart</button></td>
+        <td>Resistance bands are versatile tools for strength training, providing adjustable resistance to target
+          various muscle groups.<br>
+          They are effective for enhancing flexibility and improving range of motion, making them ideal for
+          rehabilitation exercises.<br>
+          Resistance bands are portable and convenient, allowing for a full-body workout anytime, anywhere without the
+          need for heavy equipment.<br>
+          Incorporating resistance bands in your fitness routine can help increase muscle endurance, stamina, and
+          overall fitness levels.</td>
+      </tr>
+      <tr>
+        <td><img src="images\foam_rollers.webp" alt="5kg weights">Foam Rollers - Rs700</td>
+        <td><button onclick="addToCart(2, 'Foam rollers', 700)">Add to Cart</button></td>
+        <td>Foam rollers are effective tools for self-myofascial release, helping to alleviate muscle tightness and
+          soreness.<br>
+          They promote flexibility by targeting trigger points and knots in muscles, improving range of motion.<br>
+          Using foam rollers can enhance circulation and blood flow to muscles, aiding in muscle recovery after
+          workouts.<br>
+          Incorporating foam rolling into your routine can contribute to better posture, reduced muscle tension, and
+          improved overall mobility.</td>
+      </tr>
+      <tr>
+        <td><img src="images\foam _mat.webp" alt="">exercise mat - Rs200</td>
+        <td><button onclick="addToCart(3, 'Exercise Mat', 200)">Add to Cart</button></td>
+        <td>Exercise mats provide a comfortable and non-slip surface for various fitness activities, including yoga,
+          Pilates, and bodyweight exercises.<br>
+          They offer cushioning and support, reducing the impact on joints and providing a stable base for workouts.<br>
+          Using exercise mats can help prevent injuries by creating a barrier between the body and the floor during
+          exercises.<br>
+          Exercise mats are versatile and portable, making them suitable for home workouts, gym sessions, and outdoor
+          fitness activities.</td>
+      </tr>
+
+    </table>
+
+    <legend>
+      <div id="cardio">
+        <center>Cardio Equipments</center>
+      </div>
+    </legend>
+    <table border="1">
+      <tr>
+
+        <td><img src="images\threadmil.webp" alt="">Threadmill - Rs30000</td>
+        <td><button onclick="addToCart(1, 'threadmill', 30000)">Add to Cart</button></td>
+        <td>
+          <ul>
+            <li>Cardiovascular Fitness: Treadmills are key for improving heart and lung health, providing an effective
+              cardio workout</li>. <br>
+
+            <li>Weight Control: Treadmills aid in weight management by allowing users to control speed and incline,
+              optimizing calorie burn. <br>
+            </li>
+            <li>Convenient Exercise: Treadmills offer a weather-independent and accessible option for consistent
+              workouts
+              at home. <br>
+            </li>
+            <li>Joint-Friendly: With a cushioned surface, treadmills reduce impact on joints, making them suitable for
+              those with joint concerns. <br>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="images\skipping rope.webp" alt="skipping rope">skipping rope - Rs700</td>
+        <td><button onclick="addToCart(2, 'skipping rope', 150)">Add to Cart</button></td>
+
+        <td>
+          <ul>
+            <li>Cardiovascular Fitness: Skipping rope is a great cardio exercise that increases your heart rate,
+              improving
+              your overall cardiovascular health.
+            </li>
+            <li>Calorie Burning: Skipping can help you burn calories, aiding in weight loss and overall fitness</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="images\rowing machine.jpeg" alt="">rowing machine - Rs25000</td>
+        <td><button onclick="addToCart(3, 'Rowing Machine', 25000)">Add to Cart</button></td>
+        <td>
+          <ul>
+            Rowing offers a low-impact, full-body workout that enhances cardiovascular fitness, burns calories, and
+            promotes weight management. <br>
+            With its gentle motion, it's kind to joints, providing muscle toning, improved posture, and increased joint
+            flexibility. <br>
+            The rhythmic exercise not only builds endurance but also serves as a stress-relieving and accessible form of
+            fitness for individuals of all ages. <br>
+            Additionally, rowing contributes to better respiratory function and lung capacity. <br>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td><img src="images\eliptical_trainers.webp" alt="">Eliptical Trainer - Rs14000</td>
+        <td><button onclick="addToCart(3, 'Eleptical Trainer', 14000)">Add to Cart</button></td>
+        <td>
+          Elliptical trainers provide a low-impact cardiovascular workout, promoting heart health and efficient calorie
+          burning. <br>
+          These machines engage both upper and lower body muscles, offering a full-body workout that enhances muscle
+          tone and endurance. <br>
+          The elliptical's smooth motion is gentle on joints, making it suitable for individuals with joint
+          sensitivities or recovering from injuries. <br>
+          Additionally, elliptical training supports weight management, reduces stress on the body, and offers a
+          customizable and versatile exercise experience.
+        </td>
+      </tr>
+
+    </table>
+    <h2>Your Cart</h2>
+
+    <div id="cart" class="cart">
+      <ul id="cart-list"></ul>
+      <p>Total: Rs<span id="total">0</span></p>
+      <p><small>Pay to FlexFuel.com</small></p>
+      <center> <button class="button" href="https://razorpay.com/">Pay Now</button></center>
+    </div>
+
+
+    <script>
+      // Initialize an empty array to store cart items
+      let cart = [];
+      let total = 0;
+
+      // Function to add an item to the cart
+      function addToCart(id, name, price) {
+        const item = { id, name, price };
+        cart.push(item);
+        updateCart();
+      }
+
+      // Function to remove an item from the cart
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+
+      // Function to update the cart display and total
+      function updateCart() {
+        const cartList = document.getElementById('cart-list');
+        const totalElement = document.getElementById('total');
+
+        cartList.innerHTML = '';
+
+        total = 0;
+        cart.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${index + 1}. ${item.name} - INR${item.price}`;
+
+          const removeButton = document.createElement('button');
+          removeButton.textContent = 'Remove';
+          removeButton.className = 'remove-button';
+          removeButton.onclick = () => removeFromCart(index);
+
+          listItem.appendChild(removeButton);
+          cartList.appendChild(listItem);
+
+          total += item.price;
+        });
+
+        // Update total in the HTML
+        totalElement.textContent = total;
+      }
+
+    </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+    <footer style="background-color: rgb(20, 20, 47);">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/your_instagram_handle" target="_blank">
+                <i class="fab fa-instagram" style="font-size:24px"></i>
+            </a>
+            <a href="https://twitter.com/your_twitter_handle" target="_blank">
+                <i class="fab fa-twitter" style="font-size:24px"></i>
+            </a>
+            <a href="https://www.pinterest.com/your_pinterest_handle" target="_blank">
+                <i class="fab fa-pinterest" style="font-size:24px"></i>
+            </a>
+            <a href="https://www.reddit.com/user/your_reddit_username" target="_blank">
+                <i class="fab fa-reddit" style="font-size:24px"></i>
+            </a>
+        </div>
+        <br>
+        <center><button style="color: aqua; background-color: black;"><a href="Main_Page.html">Go back Home</a></button>
+        </center>
+    </footer>
+</body>
+<br><br>
+
+</html>
